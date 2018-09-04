@@ -23,14 +23,15 @@ httpServer.listen(config.httpPort,function(){
 var unifiedServer = function(req, res) {
   // Get the URL and parse it
   var parsedUrl = url.parse(req.url,true);
-  console.log("parsed ", parsedUrl);
+  // console.log("parsed ", parsedUrl);
 
   // Get the path
   var path = parsedUrl.pathname;
-  console.log("Path ", path);
+  // console.log("Path ", path);
+
   // This RegEx trims away any leading and ending slashes, but not in the middle
   var trimmedPath = path.replace(/^\/+|\/+$/g,'');
-  console.log("Trimmad Path ", trimmedPath);
+  //console.log("Trimmad Path ", trimmedPath);
 
   // Get the query string as an object
   var queryStringObject = parsedUrl.query;
